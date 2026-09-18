@@ -3,6 +3,7 @@ using namespace std;
 
 void mostrarDisponibilidad();
 void ocuparEspacio(int numeroEspacio);
+void registrarEntrada();
 
 int main() {
     cout << "====================================" << endl;
