@@ -1,9 +1,11 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 void mostrarDisponibilidad();
-void ocuparEspacio(int numeroEspacio);
-void registrarEntrada();
+void ocuparEspacio(int numeroEspacio, string placa);
+string registrarEntrada();
+void registrarSalida();
 
 int main() {
     cout << "====================================" << endl;
@@ -13,16 +15,24 @@ int main() {
 
     mostrarDisponibilidad();
 
-int numeroEspacio;
+    int numeroEspacio;
 
-cout << endl;
-cout << "Ingrese el numero del espacio que desea ocupar: ";
-cin >> numeroEspacio;
+    cout << endl;
+    cout << "Ingrese el numero del espacio que desea ocupar: ";
+    cin >> numeroEspacio;
 
-ocuparEspacio(numeroEspacio);
+    string placa = registrarEntrada();
 
-cout << endl;
-mostrarDisponibilidad();
+    ocuparEspacio(numeroEspacio, placa);
 
-return 0;
+    cout << endl;
+    mostrarDisponibilidad();
+
+    cout << endl;
+    registrarSalida();
+
+    cout << endl;
+    mostrarDisponibilidad();
+
+    return 0;
 }
