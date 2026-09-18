@@ -31,4 +31,4 @@ C++
 Git
 GitHub
 
-Proyecto realizado de forma individual para el curso de Ingeniería en Sistemas.
+Proyecto realizado de forma individual para el curso de Algoritmos.
