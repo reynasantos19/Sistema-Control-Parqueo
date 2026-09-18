@@ -25,3 +25,19 @@ void mostrarDisponibilidad() {
         cout << endl;
     }
 }
+// Ocupa un espacio seleccionado por el usuario
+void ocuparEspacio(int numeroEspacio) {
+    if (numeroEspacio < 1 || numeroEspacio > TOTAL_ESPACIOS) {
+        cout << "Numero de espacio no valido." << endl;
+        return;
+    }
+
+    if (espacios[numeroEspacio - 1] == 1) {
+        cout << "El espacio ya esta ocupado." << endl;
+        return;
+    }
+
+    espacios[numeroEspacio - 1] = 1;
+
+    cout << "Espacio " << numeroEspacio << " ocupado correctamente." << endl;
+}

@@ -2,6 +2,7 @@
 using namespace std;
 
 void mostrarDisponibilidad();
+void ocuparEspacio(int numeroEspacio);
 
 int main() {
     cout << "====================================" << endl;
@@ -11,5 +12,16 @@ int main() {
 
     mostrarDisponibilidad();
 
-    return 0;
+int numeroEspacio;
+
+cout << endl;
+cout << "Ingrese el numero del espacio que desea ocupar: ";
+cin >> numeroEspacio;
+
+ocuparEspacio(numeroEspacio);
+
+cout << endl;
+mostrarDisponibilidad();
+
+return 0;
 }
