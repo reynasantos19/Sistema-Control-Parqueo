@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -10,8 +11,6 @@ string registrarEntrada() {
 
     cout << "Ingrese la placa del vehiculo: ";
     cin >> placa;
-
-    cout << "Vehiculo con placa " << placa << " registrado correctamente." << endl;
 
     return placa;
 }

@@ -1,35 +1,72 @@
-# Sistema de Control de Parqueo - Mundo Encantado
+Sistema de Control de Parqueo - Mundo Encantado
 
-Este proyecto consiste en el desarrollo de un sistema de control de parqueo realizado en C++ y una interfaz web.
+Este proyecto consiste en un sistema para controlar un parqueo de 50 espacios. Fue realizado utilizando C++ y también cuenta con una página web donde se pueden registrar vehículos, consultar los espacios ocupados y disponibles y llevar un control de las entradas y salidas.
 
-El sistema permite administrar 50 espacios de parqueo, registrar entradas y salidas de vehículos y consultar la disponibilidad de los espacios.
+Objetivo
 
-## Funciones principales
+Crear un programa que ayude a llevar el control de los vehículos que ingresan y salen del parqueo, evitando que dos vehículos ocupen el mismo espacio.
 
-- Mostrar los espacios disponibles y ocupados.
-- Registrar la placa de un vehículo.
-- Asignar un espacio a un vehículo.
-- Verificar si un espacio está disponible.
-- Registrar la salida de un vehículo.
-- Liberar un espacio cuando un vehículo sale.
+Funciones del programa en C++
 
-## Archivos principales
+Registrar la entrada de un vehículo.
+Asignar un espacio a cada vehículo.
+Registrar la salida de un vehículo.
+Liberar los espacios cuando un vehículo sale.
+Consultar cuáles espacios están libres y ocupados.
+Evitar que se registre otro vehículo en un espacio ocupado.
+Guardar los datos para recuperarlos al iniciar nuevamente el programa.
 
-- `main.cpp`: contiene el programa principal.
-- `espacios.cpp`: administra los espacios del parqueo.
-- `entrada.cpp`: registra las entradas.
-- `salida.cpp`: registra las salidas.
-- `web/`: contiene la interfaz web del sistema.
+Funciones de la página web
 
-## Tecnologías utilizadas
+Ver un resumen del parqueo.
+Registrar entradas y salidas de vehículos.
+Calcular el cobro según el tiempo de permanencia.
+Consultar los espacios disponibles y ocupados.
+Ver el historial de movimientos.
+Consultar los ingresos del día y los ingresos acumulados.
+Cambiar entre modo día y modo noche.
 
-- C++
-- HTML
-- CSS
-- JavaScript
-- Git
-- GitHub
+Tarifa de parqueo
 
-## Autoría
+La primera hora tiene un costo de Q5.
+Por cada 12 minutos adicionales completos se cobra Q1.
 
-Proyecto realizado de forma individual para el curso de Ingeniería en Sistemas.
+Archivos del proyecto
+
+src/main.cpp: contiene el menú principal.
+src/espacios.cpp: se encarga de los espacios del parqueo.
+src/entrada.cpp: contiene el registro de entradas.
+src/salida.cpp: contiene el registro de salidas.
+web/index.html: contiene la estructura de la página.
+web/estilos.css: contiene los estilos y colores.
+web/script.js: contiene las funciones de la página web.
+datos_parqueo.txt: guarda los datos de los vehículos registrados.
+respaldo/: contiene copias de los archivos del programa.
+pruebas/: carpeta para las pruebas realizadas.
+
+Herramientas utilizadas
+
+C++
+HTML
+CSS
+JavaScript
+Visual Studio Code
+Git y GitHub
+
+Cómo ejecutar el programa
+
+Primero se debe abrir Git Bash en la carpeta del proyecto y escribir los siguientes comandos:
+
+g++ src/main.cpp src/espacios.cpp src/entrada.cpp src/salida.cpp -o parqueo.exe
+
+./parqueo.exe
+
+Guardado de información
+
+En C++ los datos de los vehículos se guardan en el archivo datos_parqueo.txt.
+
+En la página web se utiliza localStorage, que permite conservar los registros aunque se actualice el navegador.
+
+Autoría
+
+Proyecto realizado de forma individual por Reyna Oralia Santos García para el curso de Ingeniería en Sistemas.

@@ -275,6 +275,6 @@ if (botonTema) {
 
         botonTema.textContent = modoNoche
             ? "☀️ Modo día"
-            : "🌙 Modo noche";
+            : "☀️ Modo noche";
     });
 }

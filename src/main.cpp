@@ -4,11 +4,14 @@
 using namespace std;
 
 void mostrarDisponibilidad();
+void cargarDatos();
 void ocuparEspacio(int numeroEspacio, string placa);
 string registrarEntrada();
 void registrarSalida();
 
 int main() {
+        cargarDatos();
+        
     int opcion = 0;
     int numeroEspacio;
     string placa;
