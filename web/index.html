@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Parqueo | Control de Parqueo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <span>⚙️</span>
+            <h2>Control de Parqueo</h2>
+        </div>
+
+        <p class="menu-title">MENÚ PRINCIPAL</p>
+
+        <nav>
+            <button class="nav-btn active" data-section="inicio">▦ Inicio</button>
+            <button class="nav-btn" data-section="entradas">↗ Entradas</button>
+            <button class="nav-btn" data-section="salidas">↙ Salidas</button>
+            <button class="nav-btn" data-section="espacios">▤ Espacios</button>
+            <button class="nav-btn" data-section="historial">◷ Historial</button>
+        </nav>
+
+        <div class="sidebar-footer">
+            Sistema de Control de Parqueo
+            <small>Versión 1.0</small>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <p class="welcome">ADMINISTRACIÓN</p>
+                <h1>Sistema de Control de Parqueo</h1>
+            </div>
+            <div class="topbar-actions">
+    <button id="themeToggle" class="theme-toggle" type="button">
+        🌙 Modo noche
+    </button>
+
+    <div class="status">
+        <span class="status-dot"></span> Sistema activo
+    </div>
+</div>
+        </header>
+
+        <section id="inicio" class="section active">
+            <div class="page-heading">
+                <h2>Panel principal</h2>
+                <p>Resumen general del estacionamiento.</p>
+            </div>
+
+            <div class="stats-grid">
+
+    <article class="stat-card">
+        <span>Ingresos del día</span>
+        <h2 id="ingresosDia">Q0</h2>
+        <small>Total recaudado hoy</small>
+    </article>
+
+    <article class="stat-card">
+        <span>Espacios ocupados</span>
+        <h2 id="ocupados">0</h2>
+        <small>Vehículos registrados</small>
+    </article>
+
+    <article class="stat-card">
+        <span>Espacios disponibles</span>
+        <h2 id="disponibles">50</h2>
+        <small>Espacios libres</small>
+    </article>
+
+    <article class="stat-card">
+        <span>Ingresos acumulados</span>
+        <h2 id="ingresosAcumulados">Q0</h2>
+        <small>Total recaudado por cobros</small>
+    </article>
+
+</div>
+
+            <div class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Estado de los espacios</h2>
+                        <p>Vista general de los 50 espacios.</p>
+                    </div>
+                    <div class="legend">
+                        <span class="free-dot"></span> Libre
+                        <span class="busy-dot"></span> Ocupado
+                    </div>
+                </div>
+                <div id="parkingGrid" class="parking-grid"></div>
+            </div>
+        </section>
+
+        <section id="entradas" class="section">
+            <div class="page-heading">
+                <h2>Registrar entrada</h2>
+                <p>Registro de vehículos que ingresan al parqueo.</p>
+            </div>
+
+            <div class="panel form-panel">
+                <h2>Datos del vehículo</h2>
+                <form id="formEntrada">
+                    <label for="espacioEntrada">Número de espacio</label>
+                    <input type="number" id="espacioEntrada" min="1" max="50" required>
+
+                    <label for="placaEntrada">Placa del vehículo</label>
+                    <input type="text" id="placaEntrada" placeholder="Ej. P123ABC" required>
+
+                    <button type="submit" class="primary-btn">Registrar entrada</button>
+                </form>
+                <p id="mensajeEntrada" class="message"></p>
+            </div>
+        </section>
+
+        <section id="salidas" class="section">
+            <div class="page-heading">
+                <h2>Registrar salida</h2>
+                <p>Registro de vehículos que abandonan el parqueo.</p>
+            </div>
+
+            <div class="panel form-panel">
+                <h2>Salida del vehículo</h2>
+                <form id="formSalida">
+                    <label for="espacioSalida">Número de espacio</label>
+                    <input type="number" id="espacioSalida" min="1" max="50" required>
+
+                    <button type="submit" class="primary-btn">Registrar salida</button>
+                </form>
+                <p id="mensajeSalida" class="message"></p>
+            </div>
+        </section>
+
+        <section id="espacios" class="section">
+            <div class="page-heading">
+                <h2>Consulta de espacios</h2>
+                <p>Consulta el estado y la placa de cada vehículo.</p>
+            </div>
+            <div class="panel">
+                <div id="parkingGridConsulta" class="parking-grid"></div>
+            </div>
+        </section>
+
+        <section id="historial" class="section">
+            <div class="page-heading">
+                <h2>Historial de movimientos</h2>
+                <p>Entradas y salidas registradas en el sistema.</p>
+            </div>
+            <div class="panel">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Movimiento</th>
+                                <th>Espacio</th>
+                                <th>Placa</th>
+                                <th>Fecha y hora</th>
+<th>Cobro</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaHistorial">
+                            <tr>
+                                <td colspan="5">No hay movimientos registrados.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            Sistema de Control de Parqueo | Proyecto individual
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
