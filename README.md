@@ -69,4 +69,8 @@ En la página web se utiliza localStorage, que permite conservar los registros a
 
 Autoría
 
-Proyecto realizado de forma individual por Reyna Oralia Santos García para el curso de Ingeniería en Sistemas.
+Proyecto realizado de forma individual por Reyna Oralia Santos García para el curso de Algoritmos de Ingeniería en Sistemas.
+
+Repositorio de GitHub
+
+https://github.com/reynasantos19/Sistema-Control-Parqueo
